@@ -6,6 +6,7 @@
 #include "memlayout.h"
 #include "mmu.h"
 #include "proc.h"
+#include "globalvar.h"
 
 int
 sys_fork(void)
@@ -94,4 +95,10 @@ int
 sys_wcupa(void)
 {
   return 1871;
+}
+
+int
+sys_getreadcount(void)
+{
+  return readcount;
 }
